@@ -52,6 +52,7 @@ let pth = {
 		js: ['./src/js/**/*.js','./src/blocks/**/(*.js|*.json)'],
 		css: ['./src/scss/**/*.scss','./src/blocks/**/*.scss'],
 		img: './src/images/**/!(icon-*.svg|shape-*.svg)',
+		shp: './src/images/**/shape-*.svg',
 		fnts: './src/fonts/**/*.*'
 	}
 };
@@ -138,7 +139,7 @@ function icons() {
 				svgo: {
 					plugins: [
 						{ name: 'preset-default' },
-						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke)' }},
+						{ name: 'removeAttrs', params: { attrs: '*:(fill|data-*|id|class|style|stroke*)' }},
 					]
 				}
 			}]
@@ -153,6 +154,18 @@ function icons() {
 	}))
 	.on('error', swallowError)
 	.pipe(gulp.dest(pth.src.tmpl))
+};
+
+function iconsOuter() {
+	return gulp.src(pth.src.shp)
+	.pipe($.svgSymbolView({
+		name: 'icons-sprite',
+		monochrome: {
+			dark: '#000000',
+			green: '#3CFFB9'
+		}
+	}))
+	.pipe(gulp.dest(pth.pbl.img))
 };
 
 function fonts() {
@@ -202,13 +215,15 @@ function watch() {
 	gulp.watch(pth.wtch.js, js);
 	gulp.watch(pth.wtch.html, html);
 	gulp.watch(pth.wtch.css, styles);
+	gulp.watch(pth.wtch.shp, iconsOuter);
 	gulp.watch(pth.wtch.img, images);
 	gulp.watch(pth.wtch.fnts, fonts);
 }
 
-const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, fonts));
+const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, iconsOuter, fonts));
 
 exports.build = build;
 exports.icons = icons;
+exports.iconsOuter = iconsOuter;
 exports.watch = gulp.series(build, watch);
 exports.deploy = gulp.series(build, deploy);
