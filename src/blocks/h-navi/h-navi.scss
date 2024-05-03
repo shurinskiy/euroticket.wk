@@ -1,16 +1,96 @@
 .h-navi {
 	$self: &;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+
+	@include media('<=sm') {
+		flex-flow: column nowrap;
+		box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
+		background-color: #fff;
+		padding: 50px 20px;
+		justify-content: center;
+	}
 
 	&__close {
+		@extend %reset-button;
+		display: none;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		left: 10px;
 
+		@include media('<=sm') {
+			display: block;
+		}
+
+		svg {
+			fill: #18171C;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__menu {
+		height: 100%;
+		display: flex;
+		align-items: center;
 
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+			height: auto;
+		}
 	}
 
 	&__link {
-
+		text-decoration: none;
+		padding: 10px 20px;
+		font-weight: 700;
+		font-size: 14px;
+		color: #fff;
+		
+		@include media('<=sm') {
+			display: block;
+			color: #18171C;
+			font-weight: 400;
+			font-size: 22px;
+			padding: 15px 0;
+		}
 	}
 
+	&__lang {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+		margin-left: 20px;
+
+		@include media('<=sm') {
+			color: #18171C;
+			font-weight: 400;
+			font-size: 22px;
+			padding: 15px 0;
+			margin: 0;
+		}
+
+		svg {
+			fill: #fff;
+			height: 24px;
+			width: 24px;
+			margin-left: 12px;
+			filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.4));
+
+			@include media('<=sm') {
+				fill: #18171C;
+				filter: none;
+				height: 32px;
+				width: 32px;
+			}
+		}
+	}
 }

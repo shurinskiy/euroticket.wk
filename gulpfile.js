@@ -156,18 +156,6 @@ function icons() {
 	.pipe(gulp.dest(pth.src.tmpl))
 };
 
-function iconsOuter() {
-	return gulp.src(pth.src.shp)
-	.pipe($.svgSymbolView({
-		name: 'icons-sprite',
-		monochrome: {
-			dark: '#000000',
-			green: '#3CFFB9'
-		}
-	}))
-	.pipe(gulp.dest(pth.pbl.img))
-};
-
 function fonts() {
 	return gulp.src(pth.src.fnts)
 		.pipe($.newer(pth.pbl.fnts))
@@ -215,15 +203,13 @@ function watch() {
 	gulp.watch(pth.wtch.js, js);
 	gulp.watch(pth.wtch.html, html);
 	gulp.watch(pth.wtch.css, styles);
-	gulp.watch(pth.wtch.shp, iconsOuter);
 	gulp.watch(pth.wtch.img, images);
 	gulp.watch(pth.wtch.fnts, fonts);
 }
 
-const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, iconsOuter, fonts));
+const build = gulp.series(clear, gulp.parallel(html, js, jslib, styles, images, fonts));
 
 exports.build = build;
 exports.icons = icons;
-exports.iconsOuter = iconsOuter;
 exports.watch = gulp.series(build, watch);
 exports.deploy = gulp.series(build, deploy);

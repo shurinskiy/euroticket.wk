@@ -1,4 +1,10 @@
 .title {
 	$self: &;
+	font-size: 32px;
+	font-weight: 300;
+	@include range(32px, 24px, 1440px, 480px);
 
+	span {
+		font-weight: 700;
+	}
 }

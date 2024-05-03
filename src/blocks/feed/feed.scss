@@ -1,36 +1,56 @@
 .feed {
 	$self: &;
+	margin-bottom: 80px;
 
 	&__top {
-
+		display: flex;
+		align-items: center;
+		margin-bottom: 50px;
 	}
 
 	&__title {
-
+		margin-right: auto;
 	}
 
 	&__sort {
 
+		span {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: 300;
+			color: #a0a0a0;
+		}
 	}
 
-	&__items {
-
-	}
-
-	&__card {
-
-	}
-
-	&__bottom {
-
-	}
-
-	&__more {
-
+	&__products {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
 	}
 
 	&__product {
 
 	}
 
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 20px;
+	}
+
+	&__card {
+		grid-column: span 5;
+		
+		&:nth-child(4n+2), &:nth-child(4n+3) {
+			grid-column: span 7;
+		}
+	}
+
+	&__bottom {
+		padding-top: 50px;
+	}
+
+	&__more {
+		margin: auto;
+	}
 }

@@ -1,20 +1,85 @@
 .find {
 	$self: &;
+	background-color: #18171C;
+	border-radius: 24px;
+	padding: 24px 30px 30px;
 
-	&__title {
+	@include media('<=md') {
 
 	}
 
-	&__form {
+	&_home {
+		margin-top: -100px;
+		margin-bottom: 80px;
+		
+		@include media('<=sm') {
+			margin-top: -180px;
+		}
 
+		#{$self}__title {
+			color: #fff;
+		
+			@include media('<=sm') {
+				display: none;
+			}
+		}
+	}
+	
+	&__title {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) 140px;
+		grid-gap: 20px;
+		align-items: end;
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__field {
 
+		span {
+			display: block;
+			color: #FAFBFC;
+			font-size: 16px;
+			font-weight: 100;
+			margin-bottom: 10px;
+		}
+
+		input {
+			@extend %reset-input;
+			background-color: #fff;
+			font-family: "MR", sans-serif;
+			border-radius: 3px;
+			padding: 10px 16px;
+			height: 60px;
+			width: 100%;
+			
+			@include media('<=sm') {
+				height: 50px;
+			}
+	
+			&::placeholder {
+				font-size: 20px;
+				color: #CED4DA;
+				font-weight: 300;
+			}
+		}
 	}
 
 	&__submit {
-
+		
+		@include media('<=sm') {
+			margin: auto;
+		}
 	}
-
 }

@@ -1,44 +1,101 @@
 .offer {
 	$self: &;
+	height: 420px;
+	margin-bottom: 80px;
+	color: #fff;
+
+	&_card {
+		background: url('#{$images-path}offer-bg-card.webp') center / cover no-repeat transparent;
+	}
+	
+	&_product {
+		background: url('#{$images-path}offer-bg-prod.webp') center / cover no-repeat transparent;
+	}
 
 	&__inner {
-
+		height: 100%;
+		display: flex;
+		align-items: center;
 	}
 
 	&__card {
-
+		margin-left: auto;
+		max-width: 610px;
+		width: 100%;
 	}
 
 	&__c-body {
-
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 85px 1fr;
+		grid-gap: 10px;
+		flex-grow: 1;
+		border: 2px solid transparent;
+		border-top: none;
+		transition: border-color 0.3s;
 	}
 
 	&__c-date {
-
+		background-color: rgba(24, 23, 28, 0.8);
+		grid-column: span 1;
+		padding: 20px;
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		border-radius: 4px;
+		
+		span {
+			font-size: 32px;
+			margin-bottom: 8px;
+		}
 	}
-
+	
 	&__c-side {
-
+		background-color: rgba(24, 23, 28, 0.8);
+		grid-column: span 1;
+		border-radius: 4px;
+		padding: 20px;
 	}
 
 	&__c-title {
-
+		margin-bottom: 10px;
 	}
-
+	
 	&__c-tags {
-
+		display: flex;
+		flex-wrap: wrap;
 	}
-
+	
 	&__c-tag {
-
+		display: block;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		font-size: 14px;
+		padding: 4px 20px;
+		text-decoration: none;
+		color: #fff;
+		margin: 0 10px 10px 0;
 	}
-
+	
 	&__c-button {
-
+		background-color: rgba(24, 23, 28, 0.8);
+		grid-column: span 2;
+		font-size: 14px;
+		padding: 15px;
+		font-weight: 600;
+		border-radius: 4px;
+		text-decoration: none;
+		text-align: center;
+		color: #fff;
 	}
 
 	&__product {
-
+		margin-left: auto;
+		height: 260px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
 	}
 
 	&__p-title {
@@ -46,7 +103,9 @@
 	}
 
 	&__p-bottom {
-
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	&__p-price {
@@ -56,5 +115,4 @@
 	&__p-button {
 
 	}
-
 }

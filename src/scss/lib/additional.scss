@@ -135,7 +135,7 @@ $images-path: "images/";
 	);
 	& {
 		position: relative;		
-		&::before {
+		&::after {
 			content: "";
 			display: block;
 			text-align: center;
@@ -152,7 +152,7 @@ $images-path: "images/";
 		}
 		@each $var, $size in $breakpoints {
 			@media screen and (max-width: #{$size}px) {
-				&::before {
+				&::after {
 					content: "#{$var}:#{$size}";
 				}
 			}

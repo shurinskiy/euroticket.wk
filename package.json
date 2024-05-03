@@ -6,7 +6,6 @@
 		"bem": "bemtree-from-html",
 		"start": "gulp watch --dev --sync",
 		"icons": "gulp icons",
-		"icons-outer": "gulp iconsOuter",
 		"remote": "gulp watch --remote",
 		"build": "gulp build",
 		"deploy-all": "gulp deploy --all",
@@ -64,5 +63,9 @@
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
 		"omit": "@@,js-,active,opened,svg,icon-box"
+	},
+	"dependencies": {
+		"scroll-lock": "^2.1.5",
+		"swiped-events": "^1.2.0"
 	}
 }
