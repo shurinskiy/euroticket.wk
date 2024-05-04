@@ -64,9 +64,22 @@ body, html {
 	display: flex;
 	color: #18171C;
 	flex-flow: column nowrap;
+
+	@include media('<=xxs') {
+		background-color: #f8f8f8;
+	}
 }
 
 body {
+	padding-top: 90px;
+	
+	@include media('<=sm') {
+		padding-top: 60px;
+	}
+
+	&#home {
+		padding-top: 0;
+	}
 	
 	&.underlay {
 		&::before {

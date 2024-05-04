@@ -4,18 +4,34 @@
 	flex-flow: column nowrap;
 	background-color: #fff;
 	transition: box-shadow 0.3s;
+	
+	@include media('<=xxs') {
+		background-color: transparent;
+	}
 
 	&:hover {
-		box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 		
-		#{$self}__body {
-			border-color: #7848FF;
+		@include media('>xs') {
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+			#{$self}__body {
+				border-color: #7848FF;
+			}
 		}
 	}
 
 	&__image {
 		display: block;
 		height: 240px;
+		
+		@include media('<=xs') {
+			height: 200px;
+		}
+		
+		@include media('<=xxs') {
+			height: 140px;
+			margin-bottom: 10px;
+		}
 
 		img {
 			width: 100%;
@@ -35,6 +51,25 @@
 		border: 2px solid transparent;
 		border-top: none;
 		transition: border-color 0.3s;
+		
+		@include media('<=lg') {
+			padding: 24px;
+		}
+		
+		@include media('<=md') {
+			padding: 16px;
+			display: flex;
+			flex-flow: column nowrap;
+			grid-gap: 0;
+		}
+		
+		@include media('<=xs') {
+			border: none;
+		}
+		
+		@include media('<=xxs') {
+			padding: 0;
+		}
 	}
 
 	&__date {
@@ -45,17 +80,46 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
+		border-radius: 4px;
+		
+		@include media('<=md') {
+			font-size: 14px;
+			display: block;
+			padding: 10px;
+			margin-bottom: 16px;
+		}
+		
+		@include media('<=xxs') {
+			background-color: #fff;
+			margin-bottom: 10px;
+		}
 
 		span {
 			font-size: 32px;
 			margin-bottom: 8px;
+		
+			@include media('<=md') {
+				font-size: 14px;
+				margin: 0;
+			}
 		}
 	}
 	
 	&__side {
 		background-color: #FAFBFC;
+		border-radius: 4px;
 		grid-column: span 1;
 		padding: 20px;
+		
+		@include media('<=md') {
+			padding: 10px;
+			margin-bottom: 16px;
+		}
+		
+		@include media('<=xxs') {
+			background-color: #fff;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__title {
@@ -79,7 +143,7 @@
 		border-radius: 4px;
 		width: 32px;
 		vertical-align: bottom;
-		margin-left: 12px;
+		margin-left: 10px;
 		
 		svg {
 			fill: #7848FF;
@@ -102,11 +166,20 @@
 		text-decoration: none;
 		color: #000;
 		margin: 0 10px 10px 0;
+		
+		@include media('<=md') {
+			padding: 4px 10px;
+		}
 	}
 
 	&__button {
 		grid-column: span 2;
 		align-self: end;
+		margin-top: auto;
 		width: 100%;
+		
+		@include media('<=md') {
+			grid-column: span 1;
+		}
 	}
 }

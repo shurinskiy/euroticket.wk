@@ -1,0 +1,26 @@
+<div class="@@if(this.parent){@@parent} card">
+	<a class="card__image" href="./"><img src="images/card-image-@@image.webp" alt=""></a>
+	<div class="card__body">
+		<div class="card__date">April, <span>14</span> 22:00</div>
+		<div class="card__side">
+			<h3 class="card__title title">Oxxxymiron World Tour</h3>
+			@@if(!this.tags) {
+				<div class="card__text">
+					<p>Prague, Czech Republic</p>
+					<p>Prahha concert hall <a class="card__geo" href="./"><svg><use xlink:href="#icon-geo"></use></svg></a></p>
+				</div>
+			}
+			@@if(this.tags) {
+				<div class="card__tags">
+					<a class="card__tag" href="./">Paris, Fra..</a>
+					<a class="card__tag" href="./">Oslo, Nor..</a>
+					<a class="card__tag" href="./">Rome, Ita..</a>
+					<a class="card__tag" href="./">Berlin, Ger..</a>
+					<a class="card__tag" href="./">Rome, Ita..</a>
+					<a class="card__tag" href="./">More 12</a>
+				</div>
+			}
+		</div>
+		<a class="card__button button" href="./">Buy Tickets</a>
+	</div>
+</div>

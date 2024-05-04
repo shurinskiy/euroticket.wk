@@ -1,16 +1,26 @@
 .find {
 	$self: &;
-	background-color: #18171C;
 	border-radius: 24px;
 	padding: 24px 30px 30px;
-
+	background-color: #E1E6EE;
+	margin-top: 100px;
+	margin-bottom: 80px;
+	
 	@include media('<=md') {
-
+		padding: 24px;
+	}
+		
+	@include media('<=sm') {
+		margin-top: 30px;
+	}
+	
+	@include media('<=xs') {
+		margin-bottom: 50px;
 	}
 
 	&_home {
+		background-color: #18171C;
 		margin-top: -100px;
-		margin-bottom: 80px;
 		
 		@include media('<=sm') {
 			margin-top: -180px;
@@ -23,11 +33,23 @@
 				display: none;
 			}
 		}
+
+		#{$self}__field span {
+			color: #FAFBFC;
+		}
 	}
 	
 	&__title {
 		text-align: center;
 		margin-bottom: 20px;
+
+		br {
+			display: none;
+
+			@include media('<=sm') {
+				display: block;
+			}
+		}
 	}
 
 	&__form {
@@ -49,7 +71,7 @@
 
 		span {
 			display: block;
-			color: #FAFBFC;
+			color: #18171C;
 			font-size: 16px;
 			font-weight: 100;
 			margin-bottom: 10px;
@@ -64,14 +86,23 @@
 			height: 60px;
 			width: 100%;
 			
-			@include media('<=sm') {
+			@include media('<=md') {
 				height: 50px;
 			}
-	
+			
+			@include media('<=xxs') {
+				height: 46px;
+				font-size: 16px;
+			}
+		
 			&::placeholder {
 				font-size: 20px;
-				color: #CED4DA;
+				color: #a8acb1;
 				font-weight: 300;
+				
+				@include media('<=sm') {
+					font-size: 16px;
+				}
 			}
 		}
 	}

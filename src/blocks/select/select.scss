@@ -6,7 +6,12 @@
 	border: 1px solid #18171C;
 	border-radius: 3px;
 	min-width: 290px;
+	max-width: 400px;
 	font-size: 18px;
+	
+	@include media('<=xs') {
+		min-width: auto;
+	}
 
 	&_opened {
 		
@@ -25,6 +30,15 @@
 		white-space: nowrap;
 		padding: 10px 32px 10px 10px;
 		cursor: pointer;
+		
+		@include media('<=sm') {
+			height: 46px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 12px;
+			height: 36px;
+		}
 	
 		&::after {
 			display: block;
@@ -35,6 +49,12 @@
 			position: absolute;
 			right: 8px;
 			top: calc(50% - 12px);
+			
+			@include media('<=xxs') {
+				top: calc(50% - 9px);
+				height: 18px;
+				width: 18px;
+			}
 		}
 	}
 
@@ -53,6 +73,10 @@
 		background-color: #fff;
 		border: 1px solid #eee;
 		animation: showItem 0.4s ease;
+
+		@include media('<=xxs') {
+			font-size: 12px;
+		}
 	}
 
 	&__item {

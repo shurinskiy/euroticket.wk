@@ -1,11 +1,7 @@
-@@include("_head.html", {id:"home"})
-@@include("_header.html", {mod:"home"}) 
+@@include("_head.html")
+@@include("_header.html") 
 
-<section class="hero">
-	<h1 class="hero__title title container"><span>Welcome!</span><br/> Find your perfect event.</h1>
-</section>
-
-<section class="find find_home container">
+<section class="find container">
 	<h1 class="find__title title"><span>Welcome!</span><br/> Find your perfect event.</h1>
 	<form class="find__form" action="./">
 		<label class="find__field">
@@ -37,46 +33,22 @@
 			</select>
 		</label>
 	</div>
-	<div class="feed__items feed__items_staggered container">
+	<div class="feed__items feed__items_events container">
 		@@include("_card.html", {parent:"feed__item", image:1})
-		@@include("_card.html", {parent:"feed__item", tags:true, image:2})
+		@@include("_card.html", {parent:"feed__item", image:2})
+		@@include("_card.html", {parent:"feed__item", image:3})
+		@@include("_card.html", {parent:"feed__item", image:4})
+		@@include("_card.html", {parent:"feed__item", image:7})
+		@@include("_card.html", {parent:"feed__item", image:8})
+		@@include("_card.html", {parent:"feed__item", image:1})
+		@@include("_card.html", {parent:"feed__item", image:2})
 		@@include("_card.html", {parent:"feed__item", image:3})
 		@@include("_card.html", {parent:"feed__item", image:4})
 		@@include("_card.html", {parent:"feed__item", image:5})
-		@@include("_card.html", {parent:"feed__item", tags:true, image:6})
-	</div>
-</section>
-
-<section class="offer offer_card">
-	<div class="offer__inner container">
-		<div class="offer__card">
-			<div class="offer__c-body">
-				<div class="offer__c-date">April, <span>14</span> 22:00</div>
-				<div class="offer__c-side">
-					<h2 class="offer__c-title title">Oxxxymiron World Tour</h2>
-					<div class="offer__c-tags">
-						<a class="offer__c-tag" href="./">Paris, Fra..</a>
-						<a class="offer__c-tag" href="./">Oslo, Nor..</a>
-						<a class="offer__c-tag" href="./">Rome, Ita..</a>
-						<a class="offer__c-tag" href="./">Berlin, Ger..</a>
-						<a class="offer__c-tag" href="./">Rome, Ita..</a>
-						<a class="offer__c-tag" href="./">More 12</a>
-					</div>
-				</div>
-				<a class="offer__c-button" href="./">Buy Tickets</a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="feed">
-	<div class="feed__items feed__items_staggered container">
-		@@include("_card.html", {parent:"feed__item", image:1})
-		@@include("_card.html", {parent:"feed__item", tags:true, image:2})
+		@@include("_card.html", {parent:"feed__item", image:6})
 		@@include("_card.html", {parent:"feed__item", image:7})
-		@@include("_card.html", {parent:"feed__item", image:4})
-		@@include("_card.html", {parent:"feed__item", image:5})
-		@@include("_card.html", {parent:"feed__item", tags:true, image:8})
+		@@include("_card.html", {parent:"feed__item", image:8})
+		@@include("_card.html", {parent:"feed__item", image:3})
 	</div>
 	<div class="feed__bottom container">
 		<a class="feed__more button button_outlined" href="./">Show All</a>

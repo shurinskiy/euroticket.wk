@@ -10,6 +10,14 @@
 	&__image {
 		display: block;
 		height: 240px;
+		
+		@include media('<=sm') {
+			height: 200px;
+		}
+		
+		@include media('<=xxs') {
+			height: 140px;
+		}
 
 		img {
 			width: 100%;
@@ -23,6 +31,14 @@
 		box-sizing: border-box;
 		background-color: #18171C;
 		padding: 30px;
+		
+		@include media('<=lg') {
+			padding: 24px;
+		}
+		
+		@include media('<=sm') {
+			padding: 16px;
+		}
 	}
 
 	&__title {

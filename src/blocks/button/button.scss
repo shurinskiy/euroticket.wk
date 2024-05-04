@@ -6,6 +6,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	white-space: nowrap;
 	line-height: 1;
 	font-size: 20px;
 	min-height: 60px;
@@ -15,6 +16,16 @@
 	background-color: #7848FF;
 	border-radius: 3px;
 	color: #fff;
+	
+	@include media('<=md') {
+		min-height: 50px;
+		font-size: 16px;
+	}
+	
+	@include media('<=xxs') {
+		font-size: 14px;
+		min-height: 46px;
+	}
 
 	&_outlined {
 		color: #18171C;

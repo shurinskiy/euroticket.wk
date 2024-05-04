@@ -6,16 +6,29 @@
 
 	&_card {
 		background: url('#{$images-path}offer-bg-card.webp') center / cover no-repeat transparent;
+
+		@include media('<=sm') {
+			background-image: url('#{$images-path}offer-bg-card-mobile.webp');
+		}
 	}
 	
 	&_product {
 		background: url('#{$images-path}offer-bg-prod.webp') center / cover no-repeat transparent;
+
+		@include media('<=sm') {
+			background-image: url('#{$images-path}offer-bg-prod-mobile.webp');
+		}
 	}
 
 	&__inner {
 		height: 100%;
 		display: flex;
 		align-items: center;
+		padding: 24px 0;
+
+		@include media('<=xs') {
+			align-items: flex-end;
+		}
 	}
 
 	&__card {
@@ -33,6 +46,11 @@
 		border: 2px solid transparent;
 		border-top: none;
 		transition: border-color 0.3s;
+
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+			grid-gap: 8px;
+		}
 	}
 
 	&__c-date {
@@ -44,10 +62,19 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		border-radius: 4px;
+
+		@include media('<=xxs') {
+			font-size: 14px;
+			display: block;
+		}
 		
 		span {
 			font-size: 32px;
 			margin-bottom: 8px;
+			
+			@include media('<=xxs') {
+				font-size: 14px;
+			}
 		}
 	}
 	
@@ -76,6 +103,11 @@
 		text-decoration: none;
 		color: #fff;
 		margin: 0 10px 10px 0;
+		
+		@include media('<=xxs') {
+			padding: 4px 10px;
+			font-size: 12px;
+		}
 	}
 	
 	&__c-button {
@@ -88,6 +120,10 @@
 		text-decoration: none;
 		text-align: center;
 		color: #fff;
+		
+		@include media('<=xxs') {
+			grid-column: span 1;
+		}
 	}
 
 	&__product {
@@ -96,6 +132,11 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: space-between;
+		
+		@include media('<=sm') {
+			margin: 0 auto;
+			height: 180px;
+		}
 	}
 
 	&__p-title {
