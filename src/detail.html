@@ -1,0 +1,135 @@
+@@include("_head.html")
+@@include("_header.html")
+
+<section class="detail">
+	<div class="detail__inner container">
+		<div class="detail__image">
+			<img src="./images/card-image-7.webp" alt="">
+		</div>
+		<div class="detail__side">
+			<h1 class="detail__title">Prague, Czech Republic</h1>
+			<div class="detail__tags">
+				<a href="./">18+</a>
+				<a href="./">One more parameter</a>
+				<a href="./">One more parameter</a>
+			</div>
+			<div class="detail__text">
+				<p>Такую визу MTR (METV), может получить каждый турист. Данная виза позволяет многократный въезд в Таиланд с туристическими целями в течение 6 месяцев.</p>
+				<p>Такую визу MTR (METV), может получить каждый турист. Данная виза позволяет многократный въезд.</p>
+			</div>
+			<div class="detail__buttons">
+				<a class="detail__button button button_colored" href="./">Buy Tickets</a>
+				<a class="detail__button button button_colored" href="./">Merchandise</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="events">
+	<h2 class="events__title title container">Tour events</h2>
+	<div class="events__items container">
+		@@include("_event.html", {parent:'events__item'})
+		@@include("_event.html", {parent:'events__item'})
+		@@include("_event.html", {parent:'events__item'})
+		@@include("_event.html", {parent:'events__item'})
+		@@include("_event.html", {parent:'events__item'})
+	</div>
+</section>
+
+<section class="gallery">
+	<h2 class="gallery__title title container">How The Show Goes</h2>
+	<div class="gallery__showcase container">
+		<a class="gallery__s-item" href="https://source.unsplash.com/random/1200x1400?cats" data-fancybox="gallery" data-caption="Первое фото">
+			<img src="./images/gallery-image-1.webp" alt="">
+		</a>
+		<a class="gallery__s-item" href="./images/gallery-image-2.webp" data-fancybox="gallery" data-caption="Первое фото">
+			<img src="./images/gallery-image-2.webp" alt="">
+		</a>
+		<a class="gallery__s-item" href="./images/gallery-image-3.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-3.webp" alt="">
+		</a>
+		<a class="gallery__s-item" href="./images/gallery-image-4.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-4.webp" alt="">
+		</a>
+		<a class="gallery__s-item" href="./images/gallery-image-5.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-5.webp" alt="">
+		</a>
+		<a class="gallery__s-item" href="./images/gallery-image-6.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-6.webp" alt="">
+		</a>
+	</div>
+	<div class="gallery__hidden container">
+		<a class="gallery__h-item" href="./images/gallery-image-1.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-1.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-2.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-2.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-3.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-3.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-4.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-4.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-5.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-5.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-6.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-6.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-2.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-2.webp" alt="">
+		</a>
+		<a class="gallery__h-item" href="./images/gallery-image-3.webp" data-fancybox="gallery">
+			<img src="./images/gallery-image-3.webp" alt="">
+		</a>
+	</div>
+
+	<div class="gallery__bottom container">
+		<a class="gallery__more button button_outlined" href="./">Show All</a>
+	</div>
+</section>
+
+<section class="offer offer_product">
+	<div class="offer__inner container">
+		<div class="offer__product">
+			<h2 class="offer__p-title title">T-Shirt Souper Group</h2>
+			<div class="offer__p-bottom">
+				<div class="offer__p-price title">€140</div>
+				<a class="offer__p-button button button_filled" href="./">Buy Item</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feed">
+	<div class="feed__top container">
+		<h2 class="feed__title title">Upcoming Events</h2>
+	</div>
+	<div class="feed__items feed__items_events container">
+		@@include("_card.html", {parent:"feed__item", image:1})
+		@@include("_card.html", {parent:"feed__item", image:2})
+		@@include("_card.html", {parent:"feed__item", image:3})
+	</div>
+</section>
+
+<section class="feed">
+	<div class="feed__top container">
+		<h2 class="feed__title title">Fan Shop</h2>
+	</div>
+	<div class="feed__items container">
+		@@include("_product.html", {parent:"feed__item", image:1})
+		@@include("_product.html", {parent:"feed__item", image:2})
+		@@include("_product.html", {parent:"feed__item", image:3})
+		@@include("_product.html", {parent:"feed__item", image:4})
+		@@include("_product.html", {parent:"feed__item", image:5})
+		@@include("_product.html", {parent:"feed__item", image:6})
+	</div>
+	<div class="feed__bottom container">
+		<a class="feed__more button button_outlined" href="./">Show All</a>
+	</div>
+</section>
+
+<button class="upward"><svg><use xlink:href="#icon-up"></use></svg></button>
+
+@@include("_bottom.html")

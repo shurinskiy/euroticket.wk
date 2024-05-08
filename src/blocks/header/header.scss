@@ -1,11 +1,13 @@
 .header {
 	$self: &;
+	box-sizing: border-box;
 	position: fixed;
 	top: 0; left: 0;
 	z-index: 12;
 	width: 100%;
 	background-color: #18171C;
-	
+	padding-right: var(--fancybox-scrollbar-compensate, 0px);
+
 	&_home {
 		transition: background-color 0.3s;
 	

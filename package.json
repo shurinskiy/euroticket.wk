@@ -62,9 +62,10 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened,svg,icon-box"
+		"omit": "@@,js-,active,opened,showed,svg,icon-box"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^5.0.36",
 		"scroll-lock": "^2.1.5",
 		"swiped-events": "^1.2.0"
 	}

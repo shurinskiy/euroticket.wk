@@ -1,0 +1,141 @@
+.t-card {
+	$self: &;
+	color: #18171C;
+	display: grid;
+	grid-template-columns: 85px 1fr;
+	grid-gap: 24px;
+	
+	@include media('<=md') {
+		grid-template-columns: 1fr;
+		grid-gap: 16px;
+	}
+	
+	@include media('<=sm') {
+		grid-gap: 10px;
+	}
+
+	&__date {
+		box-shadow: 0 0 40px rgba(24, 23, 28, 0.05);
+		background-color: #fff;
+		grid-column: span 1;
+		padding: 10px 20px;
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		border-radius: 4px;
+		
+		@include media('<=md') {
+			display: block;
+		}
+			
+		span {
+			font-size: 32px;
+			margin-bottom: 3px;
+			font-weight: 600;
+
+			@include media('<=md') {
+				font-size: 16px;
+				font-weight: 400;
+			}
+		}
+	}
+	
+	&__side {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+		border-radius: 4px;
+		padding: 10px 20px;
+		box-shadow: 0 0 40px rgba(24, 23, 28, 0.05);
+		
+		@include media('<=md') {
+			padding: 20px;
+			flex-wrap: wrap;
+		}
+		
+		@include media('<=sm') {
+			justify-content: space-between;
+		}
+	}
+	
+	&__content {
+		margin-right: auto;
+		min-width: 300px;
+		grid-column: span 1;
+	
+		@include media('<=md') {
+			width: 100%;
+			min-width: auto;
+			margin-bottom: 24px;
+		}
+	}
+	
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	
+	&__info {
+		grid-column: span 1;
+	}
+
+	&__tag {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #E1E6EE;
+		text-decoration: none;
+		border-radius: 4px;
+		font-size: 14px;
+		color: inherit;
+		height: 22px;
+		width: 32px;
+		vertical-align: bottom;
+		margin-left: 8px;
+		
+		svg {
+			fill: #232B5B;
+			height: 24px;
+			width: 24px;
+		}
+	}
+
+	&__button {
+		
+		&.button {
+			padding: 10px 20px;
+
+			@include media('<=xs') {
+				min-height: 42px;
+			}
+		}
+		
+		&_buy {
+			width: 100%;
+			max-width: 400px;
+			margin-left: 20px;
+			
+			@include media('<=md') {
+				margin-left: 0;
+			}
+			
+			@include media('<=sm') {
+				margin-bottom: 20px;
+				max-width: none;
+				width: 100%;
+			}
+		}
+		
+		&_cur {
+			margin-left: 20px;
+			
+			@include media('<=sm') {
+				width: calc(50% - 10px);
+				margin: 0;
+			}
+		}
+	}
+}

@@ -6,30 +6,39 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	white-space: nowrap;
+	// white-space: nowrap;
 	line-height: 1;
 	font-size: 20px;
 	min-height: 60px;
 	font-weight: 700;
 	padding: 10px 30px;
 	text-align: center;
-	background-color: #7848FF;
 	border-radius: 3px;
-	color: #fff;
+	border: 1px solid #18171C;
+	color: #18171C;
 	
 	@include media('<=md') {
 		min-height: 50px;
+		font-size: 18px;
+	}
+	
+	@include media('<=xs') {
 		font-size: 16px;
 	}
 	
 	@include media('<=xxs') {
-		font-size: 14px;
+		font-size: 15px;
 		min-height: 46px;
 	}
-
-	&_outlined {
-		color: #18171C;
-		background-color: transparent;
-		border: 1px solid #18171C;
+	
+	&_filled {
+		border-color: #7848FF;
+		background-color: #7848FF;
+		color: #fff;
+	}
+	
+	&_colored {
+		border-color: #7848FF;
+		color: #7848FF;
 	}
 }

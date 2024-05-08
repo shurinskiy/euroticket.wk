@@ -1,0 +1,18 @@
+.events {
+	$self: &;
+	margin-bottom: 80px;
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 24px;
+	}
+
+	&__item {
+
+	}
+}

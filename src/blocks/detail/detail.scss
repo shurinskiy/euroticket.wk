@@ -1,0 +1,120 @@
+.detail {
+	$self: &;
+	margin: 120px 0 80px;
+	
+	@include media('<=sm') {
+		margin: 0 0 80px;
+	}
+	
+	@include media('<=xs') {
+		margin: 0 0 60px;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 0.95fr 1.05fr;
+		grid-gap: 55px;
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 30px;
+		}
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+			grid-gap: 30px;
+		}
+	}
+
+	&__image {
+		grid-column: span 1;
+		height: 340px;
+		
+		@include media('<=sm') {
+			margin: 0 -24px;
+		}
+		
+		@include media('<=xs') {
+			height: 300px;
+			margin: 0 -16px;
+		}
+		
+		@include media('<=xxs') {
+			height: 200px;
+		}
+	
+		img {
+			object-fit: cover;
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	
+	&__side {
+		grid-column: span 1;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 30px;
+	}
+
+	&__tags {
+		margin-bottom: 20px;
+		display: flex;
+		flex-flow: row wrap;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: #7848FF;
+			font-size: 16px;
+			padding: 3px 5px;
+			border-radius: 4px;
+			border: 1px solid #E1E6EE;
+			margin-bottom: 10px;
+
+			&:not(:last-child) {
+				margin-right: 20px;
+				
+				@include media('<=sm') {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	&__button {
+		min-height: 50px;
+		margin-bottom: 15px;
+
+		@include media('<=xs') {
+			width: 100%;
+		}
+
+		&.button {
+			@include media('<=xs') {
+				min-height: 42px;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@include media('<=xs') {
+				margin-right: 0;
+			}
+		}
+	}
+}
