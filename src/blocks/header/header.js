@@ -4,6 +4,12 @@ import { menuToggle } from "../../js/libs/menuToggle";
 (() => {
 	const header = document.querySelector('.header');
 	if(!header) return;
+
+	if (header.classList.contains('header_home')) {
+		window.addEventListener('scroll', () => {
+			header.classList[window.scrollY > 30 ? 'add': 'remove']('header_filled');
+		});
+	}
 	
 	const navi = header.querySelector('.header__navi');
 	const toggles = header.querySelectorAll('.header__toggle, .h-navi__close');
@@ -30,13 +36,7 @@ import { menuToggle } from "../../js/libs/menuToggle";
 		}
 	});
 
-	if (header.classList.contains('header_home')) {
-		window.addEventListener('scroll', () => {
-			header.classList[window.scrollY > 30 ? 'add': 'remove']('header_filled');
-		});
-	}
-
 	// открытие и закрытие меню, свайпом на мобильных устройствах
-	navi.addEventListener('swiped-left', (e) => menu.close(e));
+	navi.addEventListener('swiped-right', (e) => menu.menuClose(e));
 
 })();
