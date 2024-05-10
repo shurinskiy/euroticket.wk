@@ -1,0 +1,40 @@
+.marquee {
+	$self: &;
+	border-top: 1px solid #18171C;
+	padding: 12px 0;
+	font-size: 32px;
+	font-weight: 200;
+	@include range(32px, 20px, 1440px, 360px);
+	overflow: hidden;
+	
+	@keyframes marquee {
+		from {  transform: translateX(0%); }
+		to { transform: translateX(-100%); }
+	}
+
+	&__inner {
+		display: flex;
+	}
+	
+	&__effect {
+		display: flex;
+		animation: marquee 20s linear infinite;
+		animation-delay: 1s;
+		min-width: 150%;
+		flex-shrink: 0;
+	
+		p {
+			box-sizing: border-box;
+			flex-shrink: 0;
+			margin: 0;
+			padding: 0 5px;
+			white-space: nowrap;
+			margin-right: 25vw;
+		}
+	
+		span {
+			font-weight: 700;
+			color: #7848FF;
+		}
+	}
+}

@@ -27,7 +27,7 @@ $breakpoints: (
 );
 
 
-@include font-face("Montserrat-ExtraLight", "MR", 100);
+@include font-face("Montserrat-ExtraLight", "MR", 200);
 @include font-face("Montserrat-ExtraBold", "MR", 800);
 @include font-face("Montserrat-SemiBold", "MR", 600);
 @include font-face("Montserrat-Regular", "MR", 400);
@@ -35,7 +35,7 @@ $breakpoints: (
 @include font-face("Montserrat-Light", "MR", 300);
 @include font-face("Montserrat-Black", "MR", 900);
 @include font-face("Montserrat-Bold", "MR", 700);
-@include font-face("Montserrat-Thin", "MR", 200);
+@include font-face("Montserrat-Thin", "MR", 100);
 
 // @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
