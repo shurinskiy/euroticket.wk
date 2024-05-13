@@ -8,18 +8,36 @@
 <section class="find find_home container">
 	<h1 class="find__title title"><span>Welcome!</span><br/> Find your perfect event.</h1>
 	<form class="find__form" action="./">
-		<label class="find__field">
+		<div class="find__field">
 			<span>Country</span>
-			<input type="text" placeholder="Any">
-		</label>
-		<label class="find__field">
+			<select class="find__select">
+				<option value="0">Any</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+				<option value="4">Four</option>
+			</select>
+		</div>
+		<div class="find__field">
 			<span>City</span>
-			<input type="text" placeholder="Any">
-		</label>
-		<label class="find__field">
+			<select class="find__select">
+				<option value="0">Any</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+				<option value="4">Four</option>
+			</select>
+		</div>
+		<div class="find__field">
 			<span>Type</span>
-			<input type="text" placeholder="Any">
-		</label>
+			<select class="find__select">
+				<option value="0">Any</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+				<option value="4">Four</option>
+			</select>
+		</div>
 		<button class="find__submit button button_filled">Search!</button>
 	</form>
 </section>
@@ -29,7 +47,7 @@
 		<h2 class="feed__title title">Upcoming Events</h2>
 		<label class="feed__sort">
 			<span>Sort by</span>
-			<select>
+			<select class="feed__select">
 				<option value="">Input</option>
 				<option value="1">One</option>
 				<option value="2">Two</option>

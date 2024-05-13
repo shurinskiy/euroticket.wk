@@ -1,6 +1,12 @@
 import { selectTweaker } from "../../js/libs/selectTweaker";
 
 (() => {
-	selectTweaker(document.querySelectorAll('.feed__sort select'));
+	const selects = document.querySelectorAll('select.find__select, select.feed__select');
+	
+	selectTweaker(selects, {
+		select: function() {
+			this.querySelector('.select__head').classList.add('selected');
+		}
+	});
 
 })();

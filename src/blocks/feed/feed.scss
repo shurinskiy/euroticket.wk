@@ -34,6 +34,47 @@
 		}
 	}
 
+	&__select {
+
+		&.select {
+			border: 1px solid #18171C;
+			border-radius: 3px;
+			height: 50px;
+			min-width: 290px;
+			max-width: 400px;
+			
+			@include media('<=sm') {
+				height: 46px;
+			}
+			
+			@include media('<=xs') {
+				min-width: auto;
+			}
+			
+			@include media('<=xxs') {
+				height: 36px;
+			}
+
+			.select__head {
+		
+				@include media('<=xxs') {
+					font-size: 12px;
+				}
+			}
+
+			.select__list {
+
+				@include media('<=xxs') {
+					font-size: 12px;
+				}
+			}
+
+			.select__item {
+
+			}
+		}
+	}
+
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
